@@ -15,6 +15,13 @@ public class SimpleJump : MonoBehaviour
 
     private void Update()
     {
+        bool isJumping = Mathf.Abs(_rb2d.velocity.y) > 0.01f;
+        
+        if (isJumping)
+        {
+            return;
+        }
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _rb2d.velocity = Vector2.up * jumpVelocity;
