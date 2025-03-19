@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleJump : MonoBehaviour
 {
     [SerializeField] private float jumpVelocity = 8;
+    [SerializeField] private float jumpFallMultiplier = 1.5f;
     
     private Rigidbody2D _rb2d;
     
@@ -15,6 +16,17 @@ public class SimpleJump : MonoBehaviour
 
     private void Update()
     {
+        //  落下中
+        if (_rb2d.velocity.y < 0)
+        {
+            _rb2d.gravityScale = jumpFallMultiplier;
+        }
+        else
+        {
+            //  上昇中
+            _rb2d.gravityScale = 1f;
+        }
+        
         bool isJumping = Mathf.Abs(_rb2d.velocity.y) > 0.01f;
         
         if (isJumping)
