@@ -154,9 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90487b873b78e7140865ea4f5b85e5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 8
-  jumpFallMultiplier: 2
+  jumpVelocity: 7
+  jumpFallMultiplier: 2.5
   moveSpeed: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!50 &177158838
 Rigidbody2D:
   serializedVersion: 4
@@ -307,7 +310,7 @@ GameObject:
   - component: {fileID: 377251846}
   - component: {fileID: 377251845}
   - component: {fileID: 377251847}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +532,7 @@ GameObject:
   - component: {fileID: 1687967371}
   - component: {fileID: 1687967370}
   - component: {fileID: 1687967369}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +662,7 @@ GameObject:
   - component: {fileID: 2099974980}
   - component: {fileID: 2099974979}
   - component: {fileID: 2099974978}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
